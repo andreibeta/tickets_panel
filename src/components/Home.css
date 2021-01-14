@@ -1,0 +1,210 @@
+.thumbnail {
+    height: 85px;
+    width: 220px;
+    padding: 10px;
+    margin: 8px;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.7;
+    
+    border: 0.5px solid white;
+    margin-bottom: 2px;    
+}
+    
+
+.thumbnail_title {
+    margin-top: 15px;
+    margin-left: 5px; 
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+    overflow: hidden;
+
+
+}
+
+.thumbnails {
+    height: 90%;
+    width: 90%;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+.home_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* position: fixed; */
+    flex-direction: row;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #114357, #f29492);
+    opacity: 0.9;
+}
+.bodyBackground{
+    background:linear-gradient(to right,#7d7a72,#8c877b);
+    margin-top: 2px;
+}
+
+.accordionStyle{
+   width: 350px;
+}
+/* .left_column {
+    margin-top: 20px;
+    padding-right: 25px;
+    width:380px;
+    overflow:auto;
+    height: 92%;
+    position: relative;
+    left: 70px;
+    top: 50px;
+    display: flex;
+   
+    top: 8px;
+    flex-direction: column;
+} */
+.left_column{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin:2rem;
+}
+.right_column{
+    display: flex;
+    width: 75%;
+    padding: 5rem;
+    align-items: center;
+}
+
+/* .right_column {
+    margin-left: 15px;
+    position:relative;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+} */
+.deleteBoardIcon{
+    width:100px;
+    max-height: 40px;
+    margin-left:30px;
+}
+.create_title {
+    margin-top:20px;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.create_input {
+    width: 350px;
+    height: 30px;
+    font-size: 22px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: none;
+    outline-color: blue;
+    box-shadow: 0 2px 4px grey;
+    margin-bottom: 20px;
+}
+.addBoardButton{
+    margin-bottom: 50px;
+    width: 200px;
+    height: 50px;
+}
+
+.emoji_styling {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.imgStyle{
+    width: 180px;
+    height: 100px;
+    
+}
+.boardContainer{
+    position: relative;
+    color: white;
+    
+}
+.imageTitle{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:5px;
+}
+.line{
+    border-left: 0.5px solid white;
+    position: relative;
+    left: 130px;
+    overflow: auto;
+    
+    }
+.boardList{
+    width: 250px;
+   
+}
+.mdbbtn{
+    height: 50px;
+    width: 250px;
+}
+.titleBoard{
+
+    color:white;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+.boardsListTitle{
+    margin-top: 20px;
+    color:white;
+    position: relative;
+    left:115px;
+}
+
+/* .right_column {
+    margin-left: 15px;
+    position:relative;
+    left:250px;
+    justify-content: center;
+    width: 75%;
+    height: 100%;
+} */
+/* .container2{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /* left: 150px; 
+    overflow: scroll;
+} */
+.collapseShow{
+    width: 200px;
+    height: auto;
+}
+.emoji_styling {
+    width: 32px;
+    height: 32px;
+
+
+}
+.nextPageButton{
+    margin-top: 10px;
+    width: 180px;
+}
+.descriptionContent{
+    width: 90%;
+    height: 150px;
+    
+    margin-left:5px;
+    margin-top: 20px;
+}

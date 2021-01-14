@@ -1,0 +1,40 @@
+.buttonContainer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.buttonDiv {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.icon {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.EditCardFormContainer {
+    width: 284px;
+    margin-bottom: 8px;
+}
+
+.card {
+    min-height: 85px;
+    padding: 0;
+}
+
+.card-header, .card-body {
+    padding: 0.75rem !important;
+}
+
+.textArea {
+    resize: none;
+    width: 100%;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
