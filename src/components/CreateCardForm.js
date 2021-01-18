@@ -2,8 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { connect } from "react-redux";
 import { addList, addCard } from "../actions";
-import './App.css';
-import './EditCardForm.css';
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 
@@ -37,8 +35,6 @@ class CreateCardForm extends React.Component {
   handleChangePriority = (e) => {
     return this.setState({ priority: e.target.value });
   }
-
-
   handleChange = name => event => {
     this.setState({ ...this.state, [name]: event.target.value });
   };

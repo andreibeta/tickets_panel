@@ -3,7 +3,6 @@ import TrelloList from "./TrelloList";
 import { connect } from "react-redux";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { sort, setActiveBoard } from "../actions";
-import './App.css';
 import CreateCardForm from "./CreateCardForm";
 import SimpleAppBar from "./SimpleAppBar";
 

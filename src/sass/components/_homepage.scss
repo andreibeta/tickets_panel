@@ -55,25 +55,38 @@
 .accordionStyle{
    width: 350px;
 }
-/* .left_column {
-    margin-top: 20px;
-    padding-right: 25px;
-    width:380px;
-    overflow:auto;
-    height: 92%;
-    position: relative;
-    left: 70px;
-    top: 50px;
-    display: flex;
-   
-    top: 8px;
-    flex-direction: column;
-} */
+
 .left_column{
     display: flex;
     flex-direction: column;
     width: 25%;
     margin:2rem;
+}
+.collapseShow{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boardForm{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.boardList{
+    display: flex;
+    flex:1;
+}
+.boardElement{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    cursor: pointer;
 }
 .right_column{
     display: flex;
@@ -82,13 +95,6 @@
     align-items: center;
 }
 
-/* .right_column {
-    margin-left: 15px;
-    position:relative;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-} */
 .deleteBoardIcon{
     width:100px;
     max-height: 40px;
@@ -164,6 +170,7 @@
     font-size: 20px;
     margin-top: 5px;
     margin-left: 3px;
+    padding:.5rem;
 }
 .boardsListTitle{
     margin-top: 20px;
@@ -187,10 +194,7 @@
     /* left: 150px; 
     overflow: scroll;
 } */
-.collapseShow{
-    width: 200px;
-    height: auto;
-}
+
 .emoji_styling {
     width: 32px;
     height: 32px;
