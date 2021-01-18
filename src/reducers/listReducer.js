@@ -72,10 +72,13 @@ const listsReducer = (state = initialState, action) => {
 
     case CONSTANTS.DELETE_CARD: {
       const { listID, id } = action.payload;
-
+      //id->is the id of the card that wants to be deleted and listID is used to know in what list it is the card
       const list = state[listID];
+
+      //the filter method creates a new array with all the elements that pass the test implemented
       const newCards = list.cards.filter(cardID => cardID !== id);
 
+      //in the end we use the spread operator to copy properties from one object to another
       return { ...state, [listID]: { ...list, cards: newCards } };
     }
 

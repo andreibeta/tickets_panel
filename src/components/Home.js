@@ -6,7 +6,7 @@ import { importList } from "../actions/listsActions";
 import { importCard } from "../actions/cardsActions";
 import { } from "../actions/"
 
-import './Home.css';
+//import './Home.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTrash, faGrinAlt, faEdit  } from '@fortawesome/free-solid-svg-icons';
 import Button from "react-bootstrap/Button";
@@ -76,8 +76,6 @@ const renderBoardDescription = () => {
       <p style={{color:"white", font:"serif", fontSize:"23px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     </div>
-  
-  
     );
 
   } else {
@@ -114,29 +112,17 @@ const renderBoardDescription = () => {
       return;
     }
   };
-
-
-
-  // const renderEmojis = (e) => {
-  //     return (
-  //       <Picker onClick={(emoji) => setEmoji(emoji)} title='Pick your emoji…' emoji='point_up' 
-  //       />
-  //     )
-  //   }
     
   const BoardThumbnail = ({ id, title, emoji },{handleDeleteBoard}) => {
 
 
 
       return (
-        <div style={{display:"flex" ,flexDirection:"row", cursor:"pointer", justifyContent:"center", marginTop:"7px"}} >
-          <div onClick={() => thumbnailDispatch(id)} style={{display:"flex" ,flexDirection:"row", cursor:"pointer", left:"100px"}}>
-          <div className="emoji_styling">
-          <Emoji emoji={emoji} size={32} />
-          </div>
+        <div className="boardList">
+          <div onClick={() => thumbnailDispatch(id)} className="boardElement">
           <h4 className="titleBoard">{title}</h4>
           </div>
-          <div style={{marginTop:"9px", marginLeft:"10px"}}>
+          <div style={{marginTop:"9px", marginLeft:"10px", padding:".5rem"}}>
           <FontAwesomeIcon className="icon_delete" color="white" size="1x" icon="trash" onMouseDown={handleDeleteBoard} />
           </div>
         </div>
@@ -154,28 +140,22 @@ const renderBoardsList = () => {
       dispatch(deleteBoard(boardID={boardID}));
     }
   return (
-    <div style={{minWidth:"355px", maxWidth:"355px"}} key={boardID}>
+    <div key={boardID}>
 
 
 {BoardThumbnail({ ...board },{handleDeleteBoard})} 
 </div>
 
-
-);
-
-    
+);    
 });
 };
 
 
 const renderCreateBoard = () => {
   return (
-  <div style={{display:"inlineBlock", maxWidth:"300px"}}>
   
-  
+  <form className="boardForm" onSubmit={handleSubmit} >
   <h5 style={{color:"white"}}>Create form</h5>
-  <form onSubmit={handleSubmit} >
-
   <input
     className="create_input"
     onChange={handleChangeTitle}
@@ -185,7 +165,7 @@ const renderCreateBoard = () => {
   />
   <Form>
     <Form.Group>
-      <Form.Label style={{color:"white",fontSize:"20px",fontStyle:"bold"}}>Board description</Form.Label>
+      <h5 style={{color:"white" ,textAlign:"center"}}>Board description</h5>
       <Form.Control as="textarea" maxLength="255" style={{width:"350px"}} rows="3"
                     placeholder="Enter board description" onChange={handleChangeDesc}
                     value={boardDesc}
@@ -195,15 +175,15 @@ const renderCreateBoard = () => {
   {/* {renderEmojis()} */}
   <div style = {{display:"flex", flexDirection:"row"}}>
 
-  <Button style={{marginTop:"10px",backgroundColor:"transparent", border:"0.5px solid white", marginRight:"30px"}} onClick={handleSubmit} className="addBoardButton">Submit</Button>
-  <Emoji emoji={emojiState} size={64} />
+  <Button style={{marginTop:"10px",backgroundColor:"transparent", border:"0.5px solid white"}} onClick={handleSubmit} className="addBoardButton">Submit</Button>
+  
   </div>
 
 </form>
  
 
 
-</div>   
+ 
 );
 };
 
@@ -231,7 +211,7 @@ return (
     >
       IMPORT
     </MDBBtn>
-        <MDBCollapse className ="a" id="basicCollapse2" isOpen={!collapsedImport}>
+        <MDBCollapse className ="a" className ="collapseShow" id="basicCollapse2" isOpen={!collapsedImport}>
         {handleImport()}
         </MDBCollapse>
       </>
@@ -242,7 +222,7 @@ return (
     >
       CREATE NEW BOARD
     </MDBBtn>
-        <MDBCollapse className ="a" id="basicCollapse2" isOpen={!collapsedCreate}>
+        <MDBCollapse className ="a" className ="collapseShow" id="basicCollapse2" isOpen={!collapsedCreate}>
         {renderCreateBoard()}
         
         

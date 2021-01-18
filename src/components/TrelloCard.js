@@ -4,7 +4,7 @@ import { Draggable } from "react-beautiful-dnd";
 import EditModal from "./EditModal";
 import { editCard, deleteCard } from "../actions";
 import { connect } from "react-redux";
-import './TrelloCard.css';
+//import './TrelloCard.css';
 import ActionButton from './ActionButton';
 import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";

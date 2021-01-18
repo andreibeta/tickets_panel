@@ -6,7 +6,7 @@
     flex-wrap: nowrap;
     margin-top: 80px;
     margin-top: 75px;
-    
+    width: 100%;
 }
 
 
@@ -199,7 +199,9 @@
     left: 0;
     bottom: 0;
     right: 0;
-    overflow: auto;
+    overflow: scroll;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(to right, #114357, #f29492);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -307,4 +309,9 @@
 }
 .button_float {
     float: right;
+}
+
+
+.dragable-list{
+    width: 20rem;
 }

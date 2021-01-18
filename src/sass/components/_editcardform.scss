@@ -38,3 +38,20 @@
     outline: none;
     border: none;
 }
+/* .modal-header,
+.modal-body,
+.modal-footer{
+    background-color:#6c757d!important ;
+} */
+
+.modalCardEdit{
+    background-color:#6c757d!important ;
+    overflow: hidden;
+}
+.modal-header{
+    color:white;
+}
+.modal-title{
+    width: 100%;
+    text-align: center;
+}

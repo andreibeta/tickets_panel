@@ -1,9 +1,7 @@
 import React from "react";
 import Icon from "@material-ui/core/Icon";
 import Card from "@material-ui/core/Card";
-import "./App.css";
 import TextField from "@material-ui/core/TextField";
-import "./EditCardForm.css";
 import { ContextMenuTrigger } from "react-contextmenu";
 
 //This is the edit form

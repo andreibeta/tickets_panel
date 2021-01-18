@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from "react-bootstrap/Navbar"
-import "./App.css";
+import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';

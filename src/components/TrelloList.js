@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TrelloCard from "./TrelloCard";
 import CreateCardForm from "./CreateCardForm";
 import { Droppable, Draggable } from "react-beautiful-dnd";
-import './App.css';
+//import './App.css';
 import styled from 'styled-components';
 import { connect } from "react-redux";
 import { editTitle, deleteList } from "../actions";
@@ -17,7 +17,7 @@ library.add(faTrash);
 const Container = styled.div`
 
     border: 0.2px solid white;
-    width: 390px;
+    width: 22rem;
     margin: 10px;
 
     height: 100%;
@@ -29,7 +29,7 @@ const Container = styled.div`
 `;
 
 const CardList = styled.div`
-      width: 373px;
+      width: 20rem;
 
       background-color: ${props => (props.isDraggingOver ? 'darkgrey' : null)};
 
@@ -82,7 +82,7 @@ const TrelloList = ({ id, title, cards, listID, index, dispatch }) => {
 
   return (
 
-    <Draggable draggableId={String(listID)} index={index}>
+    <Draggable className="dragable-list" draggableId={String(listID)} index={index}>
       {(provided, snapshot) => (
         <Container
           {...provided.draggableProps}
