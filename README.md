@@ -1,6 +1,6 @@
 See the live app at:
 
-https://festive-dijkstra-03071a.netlify.com
+https://github-tickets-panel.herokuapp.com/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
