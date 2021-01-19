@@ -20,15 +20,17 @@ const listsReducer = (state = initialState, action) => {
       return newState;
     }
    
-
+    //here we add the card to the target list
     case CONSTANTS.ADD_CARD: {
       const { listID, id } = action.payload;
+      //we pass the listID were the card wants to be created
       const list = state[listID];
-      
+      //add the new card to the end of the array once it is created
       list.cards.push(`card-${id}`);
       return { ...state, [listID]: list };
     }
 
+    
     case CONSTANTS.DRAG_HAPPENED:
       const {
         droppableIdStart,
@@ -90,12 +92,12 @@ const listsReducer = (state = initialState, action) => {
       return { ...state, [listID]: list };
     }
 
-    case CONSTANTS.DELETE_LIST: {
-      const { listID } = action.payload;
-      const newState = state;
-      delete newState[listID];
-      return newState;
-    }
+    // case CONSTANTS.DELETE_LIST: {
+    //   const { listID } = action.payload;
+    //   const newState = state;
+    //   delete newState[listID];
+    //   return newState;
+    // }
     case CONSTANTS.IMPORT_CARD: {
       const { listID, id } = action.payload;
       const list = state[listID];
