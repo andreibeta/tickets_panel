@@ -121,45 +121,38 @@ class CreateCardForm extends React.Component {
           <Modal.Title>{list ? "Add another list" : "Add another card"}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div>
-            <form>
-
-              <Card className="add_card">
-                <Card.Header className="inputCardHeader">
-                  <form className="form-title-inline">
-                    <Form.Group className="form-title-group">
+        
+         <Form>
+                    <Form.Group>
                       <Form.Label>Title</Form.Label>
-                      <Form.Control className="form-title-input" required type="text" maxLength="20" placeholder={placeholder} value={this.state.text}
+                      <Form.Control required type="text" maxLength="20" placeholder={placeholder} value={this.state.text}
                         onChange={this.handleChange('text')}
                       />
                     </Form.Group>
-                  </form>
-                </Card.Header>
-                <Card.Body>
+                 
+                
                   <div className={(buttonTitle === "Add Card") ? null : "ghost"}>
 
                     <Form.Group>
                       <Form.Label>Description input</Form.Label>
 
-                      <Form.Control  as="textarea" rows="3" maxLength="200" style={{width:"400px"}} value={this.state.title} onChange={this.handleChange('title')} />
-
-
+                      <Form.Control  as="textarea" rows="3" maxLength="200" value={this.state.title} onChange={this.handleChange('title')} />
+                   </Form.Group>
+                   <Form.Group>
                       <Form.Label>Select priority</Form.Label>
-                      <div className="prioritySelector">
-                        <Form.Control style={{width:"150px"}} as="select" defaultValue='success' onChange={this.handleChangePriority}>
+                        <Form.Control as="select" defaultValue='success' onChange={this.handleChangePriority}>
                           <option></option>
                           <option value={'danger'}>High</option>
                           <option value={'warning'}>Medium</option>
                           <option value={'success'}>Low</option>
 
                         </Form.Control>
-                      </div>
-                    </Form.Group>
+                  </Form.Group>
 
                   </div>
-                </Card.Body>
-                </Card>
-
+                  </Form>
+                  </Modal.Body>
+              <Modal.Footer>
               <div className="buttonContainer">
                 <Button style={{ color: 'white', background: '#5aac44' }}
                   onMouseDown={list ? this.handleAddList : this.handleAddCard}
@@ -167,10 +160,9 @@ class CreateCardForm extends React.Component {
                   children={buttonTitle}
                 />
               </div>
-            </form>
-
-          </div>
-        </Modal.Body>
+          
+              </Modal.Footer> 
+        
       </Modal>
     );
   };

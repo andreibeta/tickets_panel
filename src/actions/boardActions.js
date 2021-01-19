@@ -9,7 +9,7 @@ export const setActiveBoard = id => {
 };
 
 export const addBoard = (emoji, title, description) => {
-  const id = uuid();
+  const id = uuid();//uuidv4 used to generate unique id's
 
   return {
     type: CONSTANTS.ADD_BOARD,
@@ -17,7 +17,7 @@ export const addBoard = (emoji, title, description) => {
   };
 };
 
-
+//we pass to the boardsReducer at the DELETE_BOARD operation the unique boardID
 export const deleteBoard = boardID => {
       return {
       type:CONSTANTS.DELETE_BOARD,

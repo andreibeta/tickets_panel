@@ -24,7 +24,7 @@ library.add(faTrash, faGrinAlt, faEdit);
 const Home = ({boardID, boards, boardOrder, dispatch }) => {
   // this is the home site that shows you your boards and you can also create a Board here.
   const [newBoardTitle, setNewBoardTitle] = useState("");
-  const [boardDesc, setBoardDesc] = useState("");
+  const [boardDescription, setBoardDescription] = useState("");
   const [isEmojing, setIsEmojing] = useState(false);
   const [emojiState, setEmoji] = useState({});
   const [createBoard, setCreateBoard] = useState(false);
@@ -90,7 +90,7 @@ const renderBoardDescription = () => {
   };
 
   const handleChangeDesc = e => {
-    setBoardDesc(e.target.value);
+    setBoardDescription(e.target.value);
   }
 
 
@@ -100,11 +100,11 @@ const renderBoardDescription = () => {
     setIsEmojing(false);
     e.preventDefault();
     
-    if(newBoardTitle && boardDesc){
+    if(newBoardTitle && boardDescription){
       
-      dispatch(addBoard(emojiState, newBoardTitle, boardDesc));
+      dispatch(addBoard(emojiState, newBoardTitle, boardDescription));
       setNewBoardTitle("");
-      setBoardDesc("");
+      setBoardDescription("");
       setEmoji({});
       toggleNewBoard();
     
@@ -168,7 +168,7 @@ const renderCreateBoard = () => {
       <h5 style={{color:"white" ,textAlign:"center"}}>Board description</h5>
       <Form.Control as="textarea" maxLength="255" style={{width:"350px"}} rows="3"
                     placeholder="Enter board description" onChange={handleChangeDesc}
-                    value={boardDesc}
+                    value={boardDescription}
        />
     </Form.Group>
   </Form>
@@ -179,11 +179,7 @@ const renderCreateBoard = () => {
   
   </div>
 
-</form>
- 
-
-
- 
+</form> 
 );
 };
 

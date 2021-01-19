@@ -3,7 +3,7 @@ import uuid from "uuidv4";
 
 export const addList = title => {
   return (dispatch, getState) => {
-    const boardID = getState().activeBoard;
+    const boardID = getState().activeBoard;//we get the boardID in order to know exactly in which board it is wanted the new list
     const id = uuid();
     dispatch({
       type: CONSTANTS.ADD_LIST,
@@ -22,9 +22,9 @@ export const sort = (
 ) => {
   return (dispatch, getState) => {
     const boardID = getState().activeBoard;
-    const activeLists = getState().boards[boardID].lists;
+    const activeLists = getState().boards[boardID].lists;//we get the boardID in order to know exactly which lists from which board should be rendered
     const lists = getState().lists;
-    console.log("CARDS ACTIONS: ", activeLists);
+    console.log("LIST ACTIONS: ", activeLists);
     dispatch({
       type: CONSTANTS.DRAG_HAPPENED,
       payload: {
