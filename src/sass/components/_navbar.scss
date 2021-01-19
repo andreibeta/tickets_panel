@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    &__boardTitle{
+        color:white;
+        align-self: center;
+        margin-left: 1.5rem;
+    }
+    &__downloadBoard{
+        margin-right: 2rem;
+    }
+}

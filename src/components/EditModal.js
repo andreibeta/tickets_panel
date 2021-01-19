@@ -17,7 +17,7 @@ const EditModal = React.memo(
             <Modal show={show}
             onHide={()=>closeForm(false)}
             >
-              <div className="modalCardEdit">
+              
               <Modal.Header closeButton>
                 <Modal.Title>Edit Card</Modal.Title>
               </Modal.Header>
@@ -25,29 +25,30 @@ const EditModal = React.memo(
       
       <Form>
         <Form.Group>
-          <Form.Label style={{marginRight:".5rem",color:"white"}}>Title</Form.Label>
-          <Form.Control style={{backgroundColor:"#6c757d",color:"white",width:"440px",height:"35px"}}  type="text" placeholder={titleholder} maxLength="15"
+          <Form.Label>Title</Form.Label>
+          <Form.Control type="text" placeholder={titleholder} maxLength="15"
           value={title} onChange={e =>onChangeTitle(e)}></Form.Control>
         </Form.Group>
         <Form.Group>
           <Form.Label>Description</Form.Label>
-          <Form.Control as="textarea" rows={3} style={{backgroundColor:"#6c757d",color:"white",width:"440px",maxHeight:"15rem",resize:"none"}}  type="text" maxLength="200"placeholder={placeholder} 
+          <Form.Control as="textarea" rows={3} type="text" maxLength="200"placeholder={placeholder} 
           value={text} onChange={e =>onChangeText(e)}></Form.Control>
         </Form.Group>
+        <Form.Group>
         <Form.Label>Priority</Form.Label>
-        <Form.Control  style={{backgroundColor:"#6c757d",color:"white",width:"440px",height:"35px"}}  as="select" defaultValue={priority} onChange={e=> onChangePriority(e)}>
+        <Form.Control as="select" defaultValue={priority} onChange={e=> onChangePriority(e)}>
               <option></option>
               <option value={'danger'}>High</option>
               <option value={'warning'}>Medium</option>
               <option value={'success'}>Low</option>
      
             </Form.Control>
+            </Form.Group>
         </Form>
      </Modal.Body>
               <Modal.Footer>
                 {children}
               </Modal.Footer>
-              </div>
             </Modal>
           </>
         );

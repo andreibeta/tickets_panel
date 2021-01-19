@@ -3,7 +3,7 @@ import uuid from "uuidv4";
 
 
 export const addCard = (listID, text, title, priority) => {
-  const id = uuid();
+  const id = uuid();//uuidv4 used to generate unique id's
   
     return {
         type: CONSTANTS.ADD_CARD,

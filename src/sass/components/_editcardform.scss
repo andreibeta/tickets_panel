@@ -1,9 +1,4 @@
-.buttonContainer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    margin-left: 8px;
-}
+
 
 .buttonDiv {
     margin-top: 8px;
@@ -31,23 +26,16 @@
     padding: 0.75rem !important;
 }
 
-.textArea {
-    resize: none;
-    width: 100%;
-    overflow: hidden;
-    outline: none;
-    border: none;
+.modal-dialog{
+    margin:6rem auto;
 }
-/* .modal-header,
-.modal-body,
-.modal-footer{
-    background-color:#6c757d!important ;
-} */
 
-.modalCardEdit{
+.modal-content{
     background-color:#6c757d!important ;
     overflow: hidden;
+    border-radius: 1rem;
 }
+
 .modal-header{
     color:white;
 }
@@ -55,3 +43,35 @@
     width: 100%;
     text-align: center;
 }
+
+.form-group{
+    color: white;
+    .form-control{
+        background-color: #6c757d;
+        color:inherit;
+        width: 95%;
+        resize: none;
+    }
+    .form-label{
+        text-align: center;
+        margin-left: .5rem;
+    }
+}
+
+.textArea {
+
+    resize: none;
+    width: 100%;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
+
+.buttonContainer {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
