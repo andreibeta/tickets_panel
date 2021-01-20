@@ -45,28 +45,34 @@ class Board extends PureComponent {
 
   render() {
     const { lists, cards, match, boards } = this.props;
-    const { boardID } = match.params;
+    const { boardID } = match.params;//we get the boardID of the current board
     
+
+    //here is the method where the json format of the board is build in order to download it
+    //we assign the target board by id which contains the properties about the board and the lists id that haves 
     const board = boards[boardID];
     if (!board) {
       return <p>Board not found</p>;
     }
-    const listOrder = board.lists;
-    console.log("Board emoji: ", board.emoji);
+    const listOrder = board.lists;//we assign the lists id's of the target board
+    console.log("listOrder:", listOrder);
        //Making the textFile for download
-       let textFile = {};
+       let textFile = {};//creating an object where we will store the properties of board/lists/cards 
 
        textFile["boards"] = board;
+       console.log("board:",board);
+       //we assign to the 'listings' element the properties of each list of the target board, including the card id's of each list   
        let listings =  listOrder.map(listID => lists[listID]);
-
+       console.log("listings:",listings);      
        textFile["lists"] = listings;
 
        let listOfCards = listOrder.map(listID =>{
-        const tempList = lists[listID];
-   
+        const tempList = lists[listID];//we assign the cards id's of each list
+        console.log("tempList:",tempList);
         const cardsList = tempList.cards.map(cardID => cards[cardID]);
-       
-     return cardsList;
+        console.log("cardsList:",cardsList);
+        //we return each cards properties of every list present in the target board
+        return cardsList;
        })
        textFile["cards"] = listOfCards;
 
@@ -83,7 +89,7 @@ class Board extends PureComponent {
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-
+              {/* we will map the lists of the target board and we will pass the data to the functional TrelloList component */}
               {listOrder.map((listID, index) => {
                 const list = lists[listID];
 
@@ -118,12 +124,12 @@ class Board extends PureComponent {
   }
 }
 
-
+//used for selecting the part of the data from the store that the connected component needs
 const mapStateToProps = state => ({
   lists: state.lists,
   cards: state.cards,
   boards: state.boards,
  
 });
-
+//it is called every time the store state changes
 export default connect(mapStateToProps)(Board);
