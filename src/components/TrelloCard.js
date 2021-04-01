@@ -4,7 +4,6 @@ import { Draggable } from "react-beautiful-dnd";
 import EditModal from "./EditModal";
 import { editCard, deleteCard } from "../actions";
 import { connect } from "react-redux";
-//import './TrelloCard.css';
 import ActionButton from './ActionButton';
 import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
@@ -15,6 +14,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faTrash, faEdit);
 
 
+//the component is wraped in React.memo() which means that react renders the component and store the result
+//also before the next render,if the new props are the same react will reuse the stored result skipping the next rendering
 const TrelloCard = React.memo(({ priority, title, text, id, listID, index, dispatch }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [cardText, setText] = useState(text);

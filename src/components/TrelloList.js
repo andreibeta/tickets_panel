@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TrelloCard from "./TrelloCard";
 import CreateCardForm from "./CreateCardForm";
 import { Droppable, Draggable } from "react-beautiful-dnd";
-//import './App.css';
 import styled from 'styled-components';
 import { connect } from "react-redux";
 import { editTitle, deleteList } from "../actions";
@@ -48,7 +47,7 @@ const TrelloList = ({ id, title, cards, listID, index, dispatch }) => {
   const renderEditInput = () => {
     return (
       <Form.Control
-        style={{ width:"360px", height:"60px"}}
+        style={{ width:"100%", height:"60px"}}
         as="textarea"
         className="editList"
         value={listTitle}
@@ -122,6 +121,8 @@ const TrelloList = ({ id, title, cards, listID, index, dispatch }) => {
 
                   
                   >
+              {/* we will map the cards of each target list and we will pass the data to the functional TrelloCard component */}
+
                     {cards.map((card, index) => (
 
                       <TrelloCard
