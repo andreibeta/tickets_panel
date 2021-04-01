@@ -1,6 +1,18 @@
-See the live app at:
 
-https://festive-dijkstra-03071a.netlify.com
+This tickets panel project it was intended to be some kind of Jira Application or Kanban lookalike.<br>
+Broadly, this app haves the basic features that this kind of apps have.<br>
+The features are this:<br>
+    -the user can create a new board with a name that he prefers<br>
+    -in this particular board the user can create a preferential amount of columns that signify the different stages of a project<br>
+    -in this specific columns it can create different cards with a title,desription and a priority, the card obviously signifies a specific task in a specific stage, 
+relative to the column it is on<br>
+    -this cards can be drag and dropped, when the user considers that this card/task is in a new cycle of work<br>
+    -the app in this stage of work doesn't have a database, but as a replacement it does have some kind of store and a way to share this boards.<br>
+    -the app's data is stored in the cache of the browser<br>
+    -the boards of this app can be downloaded in json format and it can be imported on another device/browser<br>
+
+See the live app at:<br>
+https://github-tickets-panel.herokuapp.com/<br>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
