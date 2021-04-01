@@ -1,4 +1,3 @@
-
 This tickets panel project it was intended to be some kind of Jira Application or Kanban lookalike.<br>
 Broadly, this app haves the basic features that this kind of apps have.<br>
 The features are this:<br>
